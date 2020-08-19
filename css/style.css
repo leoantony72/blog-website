@@ -1,0 +1,236 @@
+body,
+html {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+:root {
+  /* theme colors */
+  --text-gray: #3f4954;
+  --bg-color: #0f0f0f;
+  --primary-color: #27debf;
+
+  /*  theme font-family */
+  --lexend: "Lexend Deca", sans-serif;
+  --livvic: "Livvic", sans-serif;
+
+  /* gradient colors */
+  --sky: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); /* 010 Winter*/
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+/*------GLOBAL CLASES-------*/
+
+/*---X---GLOBAL CLASES---X----*/
+
+/*-----------------navbar----------------*/
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-black {
+  color: rgb(0, 0, 0);
+}
+
+body {
+  margin: 0%;
+  background: url("./assets/bg-01.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+nav {
+  padding: 0 2rem;
+  background-color: white;
+  position: relative;
+  justify-content: space-between;
+  height: 0rem;
+  min-height: 10vh;
+  overflow-y: hidden;
+  transition: height 1s cubic-bezier(0.26, -0.01, 0, 1.01);
+}
+
+nav .nav-brand a {
+  display: block;
+  padding: 1rem 0;
+  font-family: var(--lexend);
+  font-size: 1.6rem;
+}
+
+nav .nav-items {
+  list-style-type: none;
+  margin: 0;
+}
+
+nav .nav-items .nav-link {
+  padding: 1.3rem 2.9rem;
+  font-family: Montserrat light;
+  font-size: 1rem;
+}
+
+nav .nav-items .nav-link:hover {
+  background:rgb(235, 233, 233);
+}
+
+nav .nav-items .nav-link:hover a {
+  color: black;
+}
+
+nav .social {
+  padding: 1.4rem 0;
+}
+
+nav .social i {
+  padding: 0 0.2rem;
+}
+nav .social i:hover {
+  color: rgb(90, 88, 88);
+}
+
+nav .toggle-collapse {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  cursor: pointer;
+  display: none;
+}
+
+nav .toggle-collapse .toggle-icons {
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.4rem 4rem;
+}
+
+nav .toggle-collapse .toggle-icons i {
+  font-size: 1.4rem;
+}
+
+.collapse {
+  height: 30rem;
+}
+
+/* creating own toggle icons  */
+.icon,
+.icon::before,
+.icon::after {
+  position: relative;
+  width: 10px;
+  border: 2px solid var(--text-gray);
+  border-radius: 3rem;
+  display: inline-block;
+  transition: all 0.8s ease;
+  transition-property: width, left;
+}
+
+.icon::before {
+  content: " ";
+  position: absolute;
+  top: 5px;
+  width: 20px;
+  left: -12px;
+}
+
+.icon::after {
+  content: " ";
+  position: absolute;
+  top: 12px;
+  left: -2px;
+}
+
+.toggle-click,
+.toggle-click::before,
+.toggle-click::after {
+  width: 20px;
+}
+
+.toggle-click::before {
+  left: -2px;
+}
+
+@media only screen and (max-width: 800px) {
+  nav .nav-items {
+    padding-top: 10px;
+    flex-direction: column;
+  }
+  nav {
+    overflow-x: hidden;
+    flex-direction: column !important;
+    display: block !important;
+  }
+
+  nav .toggle-collapse {
+    display: initial;
+  }
+  nav {
+    z-index: 99;
+  }
+}
+/*-------x-----------navbar-----------x------*/
+
+/*-------SITE-------*/
+.portfolio {
+  color: white;
+  background: cover;
+  background: url(../assets/main/dark\ leaf.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 90vh;
+}
+
+.portfolio .img img {
+  width: 500px;
+  height: 350px;
+}
+
+.logo {
+  font-size: 304px;
+  font-family: livvic;
+  font-weight: 500;
+}
+.page {
+  min-height: 90vh;
+  display: grid;
+  grid-template-columns: 5% 3fr 5%;
+}
+.img {
+  overflow: hidden;
+  height: 500px;
+  align-self: center;
+  justify-self: center;
+  display: flex;
+}
+.details {
+  text-align: center;
+  grid-column: 2/3;
+  align-self: center;
+  padding-bottom: 12rem;
+}
+.details h1 {
+  font-size: 70px;
+  font-family: Montserrat thin;
+  font-weight: 500;
+  /*padding-bottom: 0px;*/
+  padding-right: 0px;
+  margin: 0px;
+  padding: 0px 0px 0px 12px;
+}
+
+.details h2 {
+  line-height: 0px;
+  padding-left: 1.9rem;
+  font-size: 27px;
+  font-family: livvic;
+  font-weight: 500;
+}
+.details p {
+  font-family: livvic;
+  font-weight: 500;
+}
+/*---X----SITE---X----*/
